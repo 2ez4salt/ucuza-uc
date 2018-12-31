@@ -1,0 +1,7 @@
+{
+  "name": "Ucuza Uç",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
