@@ -28,5 +28,9 @@ export class HomePage {
     {code: "MED", airportName: "Madinah Havalimanı", province: "Medine", country: "Suudi Arabistan"},
   ]
   */
-//TODO: Readme yi yeniden düzenle. |||| ler gitsin. Readme linkleri yeni sekmede açılsın. student teki s yi unutma olacak.
+  //TODO: 1) Slideların en sonunda 2 buton var. "Devam et" butonu HomePage e yönleniyor. nav.Ctrl.push metodu ile.
+  // Bu da HomePage sayfasındaki navbarda "Geri" fonksiyonu ile beraber geliyor. Gelmesin. HomePage direk root olsun.
+
+  //TODO: 2)Slide'ın sonundaki "Giriş Yap" butonu LoginPage'e yönlenmiyor. Yönlensin.
+
 }

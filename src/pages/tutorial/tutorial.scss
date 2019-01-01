@@ -2,7 +2,7 @@ page-tutorial {
   .tutorial-page {
 
     .toolbar-background {
-      background: #fff;
+      background: #3498db;
       border-color: transparent;
     }
 
@@ -28,11 +28,18 @@ page-tutorial {
       padding: 0 40px;
       font-size: 14px;
       line-height: 1.5;
-      color: #60646B;
+      color: #fff;
 
       b {
         color: #000000;
       }
+    }
+    .buttonClass{
+      border: 2px solid #ffffff;
+      border-radius: 50px;
+      color: #fff;
+      height: 45px;
+      width: 85%;
     }
 
   }

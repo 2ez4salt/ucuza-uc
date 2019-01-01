@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {HomePage} from "../home/home";
+import { HomePage } from "../home/home";
+import {LoginPage} from "../login/login";
 
 
 @Component({
@@ -30,5 +31,8 @@ export class TutorialPage {
   ];
   goHome(){
     this.navCtrl.push(HomePage);
+  }
+  goLogin(){
+    this.navCtrl.push(LoginPage);
   }
 }
