@@ -1,17 +1,35 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title style="text-align: center">UCUZA UÇ</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Ucuza Uç'un Anasayfasına Hoşgeldiniz</h2>
-  <p>
-    Bu projeyi hızlı bir şekilde bitirip iyi bir not almamız şart, mezun olmak gerek.
-  </p>
-
-  <h1>KAAN WAS HERE</h1>
-  <ion-note>
-    Saygılar.
-  </ion-note>
+<ion-content padding class="bg">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>Tek Yön</div>
+      </ion-col>
+      <ion-col>
+        <div>Gidiş-Dönüş</div>
+      </ion-col>
+    </ion-row>
+    <br><br><br>
+    <ion-card class="cardStyle">
+      <ion-card-header>
+        <ion-row>
+          <ion-col><h3>Nereden</h3></ion-col>
+          <div style="height: 70px"><ion-icon name="shuffle"></ion-icon></div>
+          <ion-col><h3>Nereye</h3></ion-col>
+        </ion-row>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-row>
+          <ion-col style="text-align: center">Tarih</ion-col>
+          <ion-col style="text-align: center">Dönüş</ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+    <button ion-button color="light">BİLET BUL</button>
+  </ion-grid>
 </ion-content>
