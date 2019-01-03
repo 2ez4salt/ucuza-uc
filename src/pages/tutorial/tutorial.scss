@@ -34,12 +34,14 @@ page-tutorial {
         color: #000000;
       }
     }
-    .buttonClass{
+
+    .buttonClass {
       border: 2px solid #ffffff;
       border-radius: 50px;
       color: #fff;
       height: 45px;
       width: 85%;
+      text-transform: initial;
     }
 
   }

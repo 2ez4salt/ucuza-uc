@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController,Slides } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+
+//Pages
 import { HomePage } from "../home/home";
 import {LoginPage} from "../login/login";
 
@@ -10,9 +13,12 @@ import {LoginPage} from "../login/login";
 })
 
 export class TutorialPage {
+  @ViewChild(Slides) slides: Slides;
 
-  constructor(public navCtrl: NavController) {}
-  slides = [
+  key:string = 'tutorial';
+
+  constructor(public navCtrl: NavController, private storage: Storage) {}
+  allslides = [
     {
       title: "Ucuza Uç mobil uygulamasına hoşgeldiniz",
       description: "<b>Ucuza Uç</b> ile daha önce bulamadığınız kolaylık ile uçak bileti alabileceksiniz!",
@@ -30,9 +36,24 @@ export class TutorialPage {
     }
   ];
   goHome(){
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
+    this.storage.get('tutorial').then((key) => {
+
+    });
   }
   goLogin(){
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.setRoot(LoginPage);
   }
+  goToSlide() {
+    this.slides.slideTo(3, 500);
+  }
+
+  ionViewDidLoad(){
+   /* this.storage.set('name', 'Max');
+
+    this.storage.get('age').then((val) => {
+      console.log('Your age is', val);
+    });*/
+  }
+
 }

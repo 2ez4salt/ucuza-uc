@@ -19,7 +19,7 @@ export class LoginPage {
   }
 
   homePageSegue(){
-    this.navCtrl.push(HomePage)
+    this.navCtrl.setRoot(HomePage);
   }
 
   ionViewDidLoad() {
