@@ -1,6 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
 import {NavController, NavParams, Nav} from 'ionic-angular';
-import { Storage } from '@ionic/storage';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -11,7 +10,6 @@ export class HomePage {
   //airports: Array <any> = [];
 
   constructor(public navCtrl: NavController,
-              public storage:Storage,
               public navParams: NavParams) {
     /*
     this.airports = [
@@ -33,8 +31,5 @@ export class HomePage {
   */
   }
   ionViewDidLoad(){
-   /* this.storage.get('kaan').then(data=> {
-      console.log(data)
-    })*/
   }
 }

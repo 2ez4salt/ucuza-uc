@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController,Slides } from 'ionic-angular';
-//import { Storage } from '@ionic/storage';
 
 //Pages
 import {LoginPage} from "../login/login";
@@ -15,7 +14,6 @@ import {TabsPage} from "../tabs/tabs";
 export class TutorialPage {
   @ViewChild(Slides) slides: Slides;
 
- // key:string = 'tutorial';
 
   constructor(public navCtrl: NavController) {}
   allslides = [
@@ -36,9 +34,11 @@ export class TutorialPage {
     }
   ];
   goHome(){
+    localStorage.setItem('isTutorialFinished', 'true');
     this.navCtrl.setRoot(TabsPage);
   }
   goLogin(){
+    localStorage.setItem('isTutorialFinished', 'true');
     this.navCtrl.setRoot(LoginPage);
   }
   goToSlide() {
