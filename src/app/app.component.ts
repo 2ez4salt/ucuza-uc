@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 //Pages
-import { TabsPage } from '../pages/tabs/tabs';
 import { TutorialPage } from "../pages/tutorial/tutorial";
 
 @Component({
@@ -12,7 +11,7 @@ import { TutorialPage } from "../pages/tutorial/tutorial";
 })
 export class MyApp {
   //rootPage:any; //TODO: Localstorage işini çözdükten sonra aşağıdaki if'i ve bu satırı yorumdan çıkar. Bir alt satırı ise sil.
-  rootPage:any = TutorialPage;
+  rootPage = TutorialPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

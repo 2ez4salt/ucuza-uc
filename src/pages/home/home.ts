@@ -1,16 +1,18 @@
-import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {NavController, NavParams, Nav} from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
+  @ViewChild(Nav) nav: Nav;
   //airports: Array <any> = [];
 
-  constructor(public navCtrl: NavController,public storage:Storage) {
+  constructor(public navCtrl: NavController,
+              public storage:Storage,
+              public navParams: NavParams) {
     /*
     this.airports = [
       {code: "IST", airportName: "İstanbul Atatürk Havalimanı", province: "İstanbul", country: "Türkiye"},

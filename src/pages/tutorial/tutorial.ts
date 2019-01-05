@@ -1,10 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController,Slides } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
+//import { Storage } from '@ionic/storage';
 
 //Pages
-import { HomePage } from "../home/home";
 import {LoginPage} from "../login/login";
+import {TabsPage} from "../tabs/tabs";
 
 
 @Component({
@@ -15,9 +15,9 @@ import {LoginPage} from "../login/login";
 export class TutorialPage {
   @ViewChild(Slides) slides: Slides;
 
-  key:string = 'tutorial';
+ // key:string = 'tutorial';
 
-  constructor(public navCtrl: NavController, private storage: Storage) {}
+  constructor(public navCtrl: NavController) {}
   allslides = [
     {
       title: "Ucuza Uç mobil uygulamasına hoşgeldiniz",
@@ -36,10 +36,7 @@ export class TutorialPage {
     }
   ];
   goHome(){
-    this.navCtrl.setRoot(HomePage);
-    this.storage.get('tutorial').then((key) => {
-
-    });
+    this.navCtrl.setRoot(TabsPage);
   }
   goLogin(){
     this.navCtrl.setRoot(LoginPage);
