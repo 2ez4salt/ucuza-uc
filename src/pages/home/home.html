@@ -5,8 +5,10 @@
 </ion-header>
 
 <ion-content padding class="bg">
-  <ion-card style="border-radius: 15px">
-    <ion-card-header><i class="fas fa-plane-departure"></i> Nereden?</ion-card-header>
-    <ion-card-content><i class="fas fa-plane-arrival"></i> Nereye?</ion-card-content>
+  <ion-card style="border-radius: 15px; background: transparent;">
+    <ion-card-header><button ion-button color="light" full (click)="neredenActionSheet()"><i class="fas fa-plane-departure"></i> Nereden?</button></ion-card-header>
+    <ion-card-content><div> {{selectedOption}}</div></ion-card-content>
+    <ion-card-header><button ion-button color="light" full (click)="nereyeActionSheet()"><i class="fas fa-plane-arrival"></i> Nereye?</button></ion-card-header>
+    <ion-card-content><div>{{selectedOption2}}</div></ion-card-content>
   </ion-card>
 </ion-content>

@@ -11,7 +11,7 @@ import {TabsPage} from "../pages/tabs/tabs";
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TutorialPage;
+  rootPage:any;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -20,6 +20,9 @@ export class MyApp {
       statusBar.styleDefault();
       if(localStorage.getItem('isTutorialFinished') === 'true')
         this.rootPage = TabsPage;
+      else {
+        this.rootPage = TutorialPage;
+      }
       splashScreen.hide();
     });
   }
