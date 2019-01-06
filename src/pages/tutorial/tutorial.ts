@@ -45,12 +45,4 @@ export class TutorialPage {
     this.slides.slideTo(3, 500);
   }
 
-  ionViewDidLoad(){
-   /* this.storage.set('name', 'Max');
-
-    this.storage.get('age').then((val) => {
-      console.log('Your age is', val);
-    });*/
-  }
-
 }

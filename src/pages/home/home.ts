@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {NavController, NavParams, Nav, ActionSheetController} from 'ionic-angular';
+import {NavController, Nav, ActionSheetController} from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -10,7 +10,6 @@ export class HomePage {
   selectedOption: any;
   selectedOption2: any;
   constructor(public navCtrl: NavController,
-              public navParams: NavParams,
               public actionSheetCtrl: ActionSheetController) {
 
   }
