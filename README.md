@@ -13,7 +13,7 @@
   <tbody>
     <tr>
       <td>UI design  </td>
-      <td><a href="https://https://github.com/kaanerdogan" target="_blank">İ. Kaan Erdoğan</a></td>
+      <td><a href="https://github.com/kaanerdogan" target="_blank">İ. Kaan Erdoğan</a></td>
     </tr>
     <tr>
       <td>Back-end </td>

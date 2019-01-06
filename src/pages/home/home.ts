@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {NavController, NavParams, Nav} from 'ionic-angular';
+import {NavController, NavParams, Nav, ActionSheetController} from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -10,7 +10,8 @@ export class HomePage {
   //airports: Array <any> = [];
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              public actionSheetCtrl: ActionSheetController) {
     /*
     this.airports = [
       {code: "IST", airportName: "İstanbul Atatürk Havalimanı", province: "İstanbul", country: "Türkiye"},
@@ -30,6 +31,31 @@ export class HomePage {
     ]
   */
   }
-  ionViewDidLoad(){
+
+  presentActionSheet() {
+    const actionSheet = this.actionSheetCtrl.create({
+      title: 'Modify your album',
+      buttons: [
+        {
+          text: 'Destructive',
+          role: 'destructive',
+          handler: () => {
+            console.log('Destructive clicked');
+          }
+        },{
+          text: 'Archive',
+          handler: () => {
+            console.log('Archive clicked');
+          }
+        },{
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
   }
 }
