@@ -7,8 +7,8 @@ import {NavController, Nav, ActionSheetController} from 'ionic-angular';
 export class HomePage {
 
   @ViewChild(Nav) nav: Nav;
-  selectedOption: any;
-  selectedOption2: any;
+  selectedOption: any = "Nereden";
+  selectedOption2: any = "Nereye";
   constructor(public navCtrl: NavController,
               public actionSheetCtrl: ActionSheetController) {
 
@@ -33,12 +33,12 @@ export class HomePage {
       {code: "MED", airportName: "Madinah Havalimanı", province: "Medine", country: "Suudi Arabistan"},
     ]
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Bir Havalimanı Seçin aslan parçısıları',
+      title: 'Lütfen kalkış için bir havalimanı seçin',
     });
 
     airports.forEach(airports => {
       actionSheet.addButton({
-        text: airports.airportName,
+        text: airports.code +' - '+ airports.airportName,
         handler: function() {
           self.selectedOption = this.text;
         }
@@ -67,12 +67,12 @@ export class HomePage {
       {code: "MED", airportName: "Madinah Havalimanı", province: "Medine", country: "Suudi Arabistan"},
     ]
     let actionSheet = this.actionSheetCtrl.create({
-      title: 'Bir Havalimanı Seçin aslan parçısıları',
+      title: 'Lütfen iniş için bir havalimanı seçin',
     });
 
     airports2.forEach(airports2 => {
       actionSheet.addButton({
-        text: airports2.airportName,
+        text: airports2.code + ' - ' + airports2.airportName,
         handler: function() {
           self.selectedOption2 = this.text;
         }
