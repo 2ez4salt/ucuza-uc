@@ -1,31 +1,41 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Signup</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content class="background">
+  <ion-card>
+    <ion-card-header>
+      <img src="./../../assets/imgs/Resim1.png">
 
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label floating>E-Mail</ion-label>
+          <ion-input [(ngModel)]="emailx" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Şifre</ion-label>
+          <ion-input [(ngModel)]="pwx" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <p>Şifrenizi mi unuttunuz ? <a>Şifrenizi Sıfırlayın</a></p>
+        </ion-item>
+        <button (click)="signUpAction(emailx,pwx)" ion-button outline block color="danger">Kayıt Ol</button>
 
-<ion-content class="bg">
-  <ion-grid style="height: 100%;">
-    <ion-row align-items-center style="height: 100%;">
-      <ion-card>
-        <ion-card-header>Fill the form below and begin to fly</ion-card-header>
-        <ion-card-content>
-          <ion-item>
-            <ion-label floating no-margin><ion-icon name="person" color="dark"></ion-icon> Name</ion-label>
-            <ion-input type="text"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label floating no-margin><ion-icon name="mail" color="dark"></ion-icon> Email</ion-label>
-            <ion-input type="email"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label floating no-margin><ion-icon name="lock" color="dark"></ion-icon> Password</ion-label>
-            <ion-input type="password">Password</ion-input>
-          </ion-item>
-          <button color="secondary" ion-button full style="border-radius:15px;">Lets Go!</button>
-        </ion-card-content>
-      </ion-card>
-    </ion-row>
-  </ion-grid>
+      </ion-list>
+      <b>YA DA</b>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left block>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <div>login with facebook</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left color="danger" block>
+            <ion-icon name="logo-google"></ion-icon>
+            <div>login with Google</div>
+          </button>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>

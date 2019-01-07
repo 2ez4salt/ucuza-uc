@@ -3,6 +3,11 @@ import {BrowserModule} from '@angular/platform-browser';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import {MyApp} from './app.component';
 import {IonicStorageModule} from '@ionic/storage';
+import {FirebaseAuthentication} from '@ionic-native/firebase-authentication'
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { firebaseConfig } from './config';
 
 //Pages
 import {AboutPage} from '../pages/about/about';
@@ -33,7 +38,8 @@ import {SplashScreen} from '@ionic-native/splash-screen';
     IonicModule.forRoot(MyApp, {
       scrollPadding: false
     }),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,7 +55,9 @@ import {SplashScreen} from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    FirebaseAuthentication,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFireAuth
   ]
 })
 export class AppModule {
