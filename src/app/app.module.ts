@@ -12,7 +12,7 @@ import { firebaseConfig } from './config';
 //Pages
 import {AboutPage} from '../pages/about/about';
 import {ContactPage} from '../pages/contact/contact';
-import {HomePage} from '../pages/home/home';
+import {FiltredResults, HomePage} from '../pages/home/home';
 import {TabsPage} from '../pages/tabs/tabs';
 import {TutorialPage} from "../pages/tutorial/tutorial";
 import {SignupPage} from "../pages/signup/signup";
@@ -21,6 +21,7 @@ import {ForgotPassword, LoginPage} from "../pages/login/login";
 
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
+import {AngularFireDatabaseModule} from "@angular/fire/database";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {SplashScreen} from '@ionic-native/splash-screen';
     TutorialPage,
     SignupPage,
     LoginPage,
-    ForgotPassword
+    ForgotPassword,
+    FiltredResults
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,9 @@ import {SplashScreen} from '@ionic-native/splash-screen';
       scrollPadding: false
     }),
     IonicStorageModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -58,7 +62,8 @@ import {SplashScreen} from '@ionic-native/splash-screen';
     TutorialPage,
     SignupPage,
     LoginPage,
-    ForgotPassword
+    ForgotPassword,
+    FiltredResults
 
   ],
   providers: [

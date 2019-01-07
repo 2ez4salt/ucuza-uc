@@ -4,8 +4,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="background">
-  <ion-card style="border-radius: 15px; background: transparent;">
+<ion-content no-padding class="background">
+  <ion-card style="border-radius: 15px;">
     <ion-card-header>
       <button ion-button color="light" full (click)="neredenActionSheet()"><i
         class="fas fa-plane-departure"></i>{{selectedOption}}</button>
@@ -23,7 +23,7 @@
               <ion-icon name="calendar" color="primary"></ion-icon>
               Tarih Seçin
             </ion-label>
-            <ion-datetime [(ngModel)]="gidis" [monthNames]="monthNames"  displayFormat="DD MM YYYY" pickerFormat="DD MMMM YYYY"></ion-datetime>
+            <ion-datetime [(ngModel)]="gidis" [monthNames]="monthNames"  displayFormat="YYYY.M.D" pickerFormat="YYYY.M.D"></ion-datetime>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -41,7 +41,7 @@
       </ion-row>
     </ion-grid>
   </ion-card>
-  <button (click)="sonucAction(gidis,gelis)" ion-button full round>
+  <button (click)="sonucAction(gidis,gelis)" ion-button full color="light">
     <ion-icon name="search"></ion-icon>
     Sonuçları Göster
   </button>

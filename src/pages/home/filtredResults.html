@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center">UCUZA UÇ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding class="background">
+  <ion-card *ngFor="let item of filtredFlights">
+    <ion-card-header>
+      {{item.Nereden}}->{{item.Nereye}}
+    </ion-card-header>
+    <hr>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            {{item.Kod}}
+          </ion-col>
+          <ion-col>
+            {{item.Kalkis}}
+          </ion-col>
+          <ion-col>
+            {{item.available_seats}}
+          </ion-col>
+          <ion-col>
+            {{item.Fiyat}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+
+  </ion-card>
+  <h1>Filtred</h1>
+</ion-content>

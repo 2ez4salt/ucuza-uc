@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //Pages
 import { TutorialPage } from "../pages/tutorial/tutorial";
 import {LoginPage} from "../pages/login/login";
+import {TabsPage} from "../pages/tabs/tabs";
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +24,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       if(localStorage.getItem('isTutorialFinished') === 'true')
-        this.rootPage = LoginPage;
+        this.rootPage = TabsPage;
       else {
         this.rootPage = TutorialPage;
       }
