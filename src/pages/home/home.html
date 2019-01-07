@@ -23,8 +23,7 @@
               <ion-icon name="calendar" color="primary"></ion-icon>
               Tarih Seçin
             </ion-label>
-            <ion-datetime displayFormat="DDD DD MM YYYY" pickerFormat="DD MMMM YYYY" min="2019"
-                          max="2050"></ion-datetime>
+            <ion-datetime [monthNames]="monthNames"  displayFormat="DD MM YYYY" pickerFormat="DD MMMM YYYY"></ion-datetime>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -36,8 +35,7 @@
               <ion-icon name="calendar" color="primary"></ion-icon>
               Tarih Seçin
             </ion-label>
-            <ion-datetime displayFormat="DDD DD MM YYYY" pickerFormat="DD MMMM YYYY" min="2019"
-                          max="2050"></ion-datetime>
+            <ion-datetime [monthNames]="monthNames" displayFormat="DD MM YYYY" pickerFormat="DD MMMM YYYY"></ion-datetime>
           </ion-item>
         </ion-col>
       </ion-row>

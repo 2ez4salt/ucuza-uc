@@ -3,7 +3,6 @@ import { NavController,Slides } from 'ionic-angular';
 
 //Pages
 import {LoginPage} from "../login/login";
-import {TabsPage} from "../tabs/tabs";
 
 
 @Component({

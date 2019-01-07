@@ -6,6 +6,7 @@ import {NavController, Nav, ActionSheetController} from 'ionic-angular';
 })
 export class HomePage {
 
+
   @ViewChild(Nav) nav: Nav;
   selectedOption: any = "Nereden";
   selectedOption2: any = "Nereye";

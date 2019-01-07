@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {HomePage} from '../home/home'
 import {AngularFireAuth} from "@angular/fire/auth";
-import {TabsPage} from "../tabs/tabs";
-import {SignupPageModule} from "../signup/signup.module";
 import {SignupPage} from "../signup/signup";
 import {AlertController} from "ionic-angular";
 

@@ -36,6 +36,12 @@ import {SplashScreen} from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, {
+      monthNames: ['Ocak', 'Subat', 'Mart','Nisan','Mayis','Haziran','Temmuz','Agustos','Eylul','Ekim','Kasim','Aralik'],
+      monthShortNames: ['Oca','Sub','Mar','Nis','May','Haz','Tem','Agu','Eyl', 'Eki','Kas','Ara'],
+      dayNames: ['Pazartesi','Sali','Carsamba','Persembe','Cuma', 'Cumartesi', 'Pazar'],
+      dayShortNames: ['Pzt','Sal','Car','Per','Cum','Cts','Paz'],
+      min: [2019-1-8],
+      max: [2020-12-31],
       scrollPadding: false
     }),
     IonicStorageModule.forRoot(),
