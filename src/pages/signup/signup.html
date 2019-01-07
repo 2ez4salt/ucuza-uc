@@ -5,6 +5,9 @@
 
     </ion-card-header>
     <ion-card-content>
+      <ion-card-title>
+        Kayıt Ekranı
+      </ion-card-title>
       <ion-list no-lines>
         <ion-item>
           <ion-label floating>E-Mail</ion-label>
@@ -17,7 +20,8 @@
         <ion-item>
           <p>Şifrenizi mi unuttunuz ? <a>Şifrenizi Sıfırlayın</a></p>
         </ion-item>
-        <button (click)="signUpAction(emailx,pwx)" ion-button outline block color="danger">Kayıt Ol</button>
+        <button (click)="signUpAction(emailx,pwx)" ion-button  block color="danger">Kayıt Ol</button>
+        <button (click)="loginPageSegue()" ion-button  block color="secondary">Giriş Yap</button>
 
       </ion-list>
       <b>YA DA</b>

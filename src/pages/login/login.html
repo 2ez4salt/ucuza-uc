@@ -5,6 +5,9 @@
 
     </ion-card-header>
     <ion-card-content>
+      <ion-card-title>
+        Giriş Ekranı
+      </ion-card-title>
       <ion-list no-lines>
         <ion-item>
           <ion-label floating>E-Mail</ion-label>
@@ -14,11 +17,11 @@
           <ion-label floating>Şifre</ion-label>
           <ion-input [(ngModel)]="pwx" type="password"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item (click)="forgotPasswordSegue()">
           <p>Şifrenizi mi unuttunuz ? <a>Şifrenizi Sıfırlayın</a></p>
         </ion-item>
-        <button (click)="loginAction(emailx,pwx)" ion-button outline block color="danger">Giriş Yap</button>
-        <button (click)="loginPageSegue()" ion-button outline block color="danger">Kayıt Ol</button>
+        <button (click)="loginAction(emailx,pwx)" ion-button  block color="secondary">Giriş Yap</button>
+        <button (click)="loginPageSegue()" ion-button  block color="danger">Kayıt Ol</button>
 
       </ion-list>
       <b>YA DA</b>

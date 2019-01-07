@@ -16,7 +16,7 @@ import {HomePage} from '../pages/home/home';
 import {TabsPage} from '../pages/tabs/tabs';
 import {TutorialPage} from "../pages/tutorial/tutorial";
 import {SignupPage} from "../pages/signup/signup";
-import {LoginPage} from "../pages/login/login";
+import {ForgotPassword, LoginPage} from "../pages/login/login";
 
 
 import {StatusBar} from '@ionic-native/status-bar';
@@ -31,7 +31,8 @@ import {SplashScreen} from '@ionic-native/splash-screen';
     TabsPage,
     TutorialPage,
     SignupPage,
-    LoginPage
+    LoginPage,
+    ForgotPassword
   ],
   imports: [
     BrowserModule,
@@ -56,7 +57,9 @@ import {SplashScreen} from '@ionic-native/splash-screen';
     TabsPage,
     TutorialPage,
     SignupPage,
-    LoginPage
+    LoginPage,
+    ForgotPassword
+
   ],
   providers: [
     StatusBar,
