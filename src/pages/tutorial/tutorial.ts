@@ -33,10 +33,6 @@ export class TutorialPage {
       image: "../../assets/imgs/slideimg.jpg",
     }
   ];
-  goHome(){
-    localStorage.setItem('isTutorialFinished', 'true');
-    this.navCtrl.setRoot(TabsPage);
-  }
   goLogin(){
     localStorage.setItem('isTutorialFinished', 'true');
     this.navCtrl.setRoot(LoginPage);
