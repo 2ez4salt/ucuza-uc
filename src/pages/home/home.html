@@ -23,7 +23,7 @@
               <ion-icon name="calendar" color="primary"></ion-icon>
               Tarih Seçin
             </ion-label>
-            <ion-datetime [monthNames]="monthNames"  displayFormat="DD MM YYYY" pickerFormat="DD MMMM YYYY"></ion-datetime>
+            <ion-datetime [(ngModel)]="gidis" [monthNames]="monthNames"  displayFormat="DD MM YYYY" pickerFormat="DD MMMM YYYY"></ion-datetime>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -35,13 +35,13 @@
               <ion-icon name="calendar" color="primary"></ion-icon>
               Tarih Seçin
             </ion-label>
-            <ion-datetime [monthNames]="monthNames" displayFormat="DD MM YYYY" pickerFormat="DD MMMM YYYY"></ion-datetime>
+            <ion-datetime [(ngModel)]="gelis" [monthNames]="monthNames" displayFormat="DD MM YYYY" pickerFormat="DD MMMM YYYY"></ion-datetime>
           </ion-item>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-card>
-  <button ion-button full round>
+  <button (click)="sonucAction(gidis,gelis)" ion-button full round>
     <ion-icon name="search"></ion-icon>
     Sonuçları Göster
   </button>

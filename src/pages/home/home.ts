@@ -82,4 +82,10 @@ export class HomePage {
 
     actionSheet.present();
   }
+
+  sonucAction(gidis,gelis){
+    console.log(this.selectedOption,this.selectedOption2)
+    console.log(gidis,gelis)
+  }
+
 }
