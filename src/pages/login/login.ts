@@ -5,6 +5,7 @@ import {AngularFireAuth} from "@angular/fire/auth";
 import {TabsPage} from "../tabs/tabs";
 import {SignupPageModule} from "../signup/signup.module";
 import {SignupPage} from "../signup/signup";
+import {AlertController} from "ionic-angular";
 
 
 @IonicPage()
@@ -16,7 +17,8 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public afAuth: AngularFireAuth
+              public afAuth: AngularFireAuth,
+              public alertCtrl:AlertController
               ) {
   }
 
@@ -24,18 +26,27 @@ export class LoginPage {
 
   }
 
-  loginAction(email,pass){
-    console.log(email,pass)
-    try{
-      const index = this.afAuth.auth.signInWithEmailAndPassword(email,pass)
-      if (index) {
-        this.navCtrl.setRoot(TabsPage)
-      }
-    }
-      catch(e){
-        console.error(e)
-      }
-    }
+
+  async loginAction(email, pass) {
+
+    this.afAuth.auth.signInWithEmailAndPassword(email, pass).then(auth => {
+      let alert = this.alertCtrl.create({
+        title: 'Başarılı',
+        subTitle: "Başarıyla Giriş Yaptınız",
+        buttons: ['Tamam']
+      });
+      alert.present();
+      this.homePageSegue()
+    })
+      .catch(err => {
+        let alert = this.alertCtrl.create({
+          title: 'Başarısız',
+          subTitle: "Girdiğiniz e-posta adresi veya şifre hatalı",
+          buttons: ['Tamam']
+        });
+        alert.present();
+      })
+  }
 
   loginPageSegue(){
     this.navCtrl.setRoot(SignupPage);
