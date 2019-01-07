@@ -19,3 +19,32 @@
   background-size: cover;
 }
 
+.background {
+  width: 100%;
+  height: 100%;
+  background: #FC664E  ;
+  background: linear-gradient(360deg, #4E5EFC  ,#4EE7FC);
+}
+.scroll-content {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+ion-card.card {
+  box-shadow: none;
+  background: rgba(232, 230, 230, 0.6px);
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.item {
+  background: rgba(232, 230, 230, 0px);
+  border: medium none;
+}
+ion-input {
+  border-bottom: #FD4D73 solid 1px;
+}
+

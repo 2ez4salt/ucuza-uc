@@ -22,9 +22,6 @@ export class LoginPage {
               ) {
   }
 
-  ionViewDidLoad(){
-
-  }
 
 
   async loginAction(email, pass) {
@@ -53,8 +50,28 @@ export class LoginPage {
   }
 
   homePageSegue(){
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(TabsPage);
   }
 
+  forgotPasswordSegue(){
+    this.navCtrl.push(ForgotPassword)
+  }
+
+}
+
+
+@Component({
+  templateUrl: 'forgot.html',
+})
+export class ForgotPassword {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public afAuth: AngularFireAuth,
+              public alertCtrl:AlertController
+  ) {
+  }
+  submitAction(email){
+    this.afAuth.auth.sendPasswordResetEmail(email)
+  }
 
 }
