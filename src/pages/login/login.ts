@@ -4,6 +4,7 @@ import {HomePage} from '../home/home'
 import {AngularFireAuth} from "@angular/fire/auth";
 import {SignupPage} from "../signup/signup";
 import {AlertController} from "ionic-angular";
+import {TabsPage} from "../tabs/tabs";
 
 
 @IonicPage()
