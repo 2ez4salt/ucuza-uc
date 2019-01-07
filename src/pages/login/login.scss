@@ -1,3 +1,15 @@
 page-login {
-
+  ion-grid {
+    padding: 0 !important;
+    ion-card{
+      background-color: #3498db;
+      border-radius: 10px !important;
+       ion-card-header{
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background: transparent;
+        text-align: center;
+      }
+    }
+  }
 }
