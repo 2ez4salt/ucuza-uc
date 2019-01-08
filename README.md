@@ -20,8 +20,8 @@
       <td><a href="https://github.com/2ez4salt" target="_blank">M.Talha Salt</a></td>
     </tr>
     <tr>
-      <td>Others</td>
-      <td> A.Burak Demir </td>
+      <td>Diagrams&Algorithms</td>
+      <td><a href="https://github.com/lior47" target="_blank">A.Burak Demir</a></td>
     </tr>
   </tbody>
 </table>
