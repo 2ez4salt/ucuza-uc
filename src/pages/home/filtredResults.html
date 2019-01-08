@@ -4,32 +4,29 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content no-padding class="background">
+<ion-content class="background">
   <ion-card *ngFor="let item of filtredFlights">
-    <ion-card-header>
-      {{item.Nereden}}->{{item.Nereye}}
+    <ion-card-header text-wrap>
+      {{item.departure_airport}}->{{item.arrival_airport}}
     </ion-card-header>
     <hr>
     <ion-card-content>
       <ion-grid>
         <ion-row>
-          <ion-col>
-            {{item.Kod}}
+          <ion-col col-3>
+            {{item.code}}
           </ion-col>
-          <ion-col>
-            {{item.Kalkis}}
+         <ion-col col-3>
+            {{item.departure_date}}
           </ion-col>
-          <ion-col>
+          <ion-col col-3>
             {{item.available_seats}}
           </ion-col>
-          <ion-col>
-            {{item.Fiyat}}
+          <ion-col col-3>
+            {{item.price}}
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-card-content>
-
-
   </ion-card>
-  <h1>Filtred</h1>
 </ion-content>

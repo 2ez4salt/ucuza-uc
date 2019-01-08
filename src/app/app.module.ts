@@ -45,7 +45,7 @@ import {AngularFireDatabaseModule} from "@angular/fire/database";
       dayShortNames: ['Pzt','Sal','Car','Per','Cum','Cts','Paz'],
       min: [2019-1-8],
       max: [2020-12-31],
-      scrollPadding: false
+      scrollAssist: false
     }),
     IonicStorageModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),

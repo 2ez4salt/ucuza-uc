@@ -5,7 +5,6 @@ import {AngularFireAuth} from "@angular/fire/auth";
 import {SignupPage} from "../signup/signup";
 import {AlertController} from "ionic-angular";
 
-
 @IonicPage()
 @Component({
   selector: 'page-login',
@@ -69,7 +68,21 @@ export class ForgotPassword {
   ) {
   }
   submitAction(email){
-    this.afAuth.auth.sendPasswordResetEmail(email)
+    this.afAuth.auth.sendPasswordResetEmail(email).then(gonder => {
+        const alert = this.alertCtrl.create({
+          title: 'Sıfırlama E-postası Gönderildi',
+          subTitle: 'Lütfen e-posta adresinizi kontrol edin ve aşağıdaki butona tıklayıp giriş yapın',
+          buttons: [{
+            text: 'Giriş sayfasına git',
+            handler: () => {
+              this.navCtrl.setRoot(LoginPage)
+            }
+          }]
+        });
+        alert.present();
+    })
+
   }
+
 
 }
