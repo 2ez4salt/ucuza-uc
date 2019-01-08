@@ -12,7 +12,7 @@ import { firebaseConfig } from './config';
 //Pages
 import {AboutPage} from '../pages/about/about';
 import {ContactPage} from '../pages/contact/contact';
-import {FiltredResults, HomePage} from '../pages/home/home';
+import {HomePage, FiltredResults, PurchasePage} from '../pages/home/home';
 import {TabsPage} from '../pages/tabs/tabs';
 import {TutorialPage} from "../pages/tutorial/tutorial";
 import {SignupPage} from "../pages/signup/signup";
@@ -34,7 +34,8 @@ import {AngularFireDatabaseModule} from "@angular/fire/database";
     SignupPage,
     LoginPage,
     ForgotPassword,
-    FiltredResults
+    FiltredResults,
+    PurchasePage
   ],
   imports: [
     BrowserModule,
@@ -63,7 +64,8 @@ import {AngularFireDatabaseModule} from "@angular/fire/database";
     SignupPage,
     LoginPage,
     ForgotPassword,
-    FiltredResults
+    FiltredResults,
+    PurchasePage
 
   ],
   providers: [

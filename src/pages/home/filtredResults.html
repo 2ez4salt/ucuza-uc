@@ -1,13 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <ion-title style="text-align: center">UCUZA UÇ</ion-title>
+    <ion-title style="text-align: center">Arama Sonuçları</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="background">
-  <ion-card *ngFor="let item of filtredFlights">
+  <h3>Yaptığınız filtrelemelere göre arama sonuçları aşağıdaki gibidir</h3>
+  <br>
+  <h5>Satın alma ekranına ilerlemek için istediğiniz saatteki uçuşa tıklayın</h5>
+  <ion-card *ngFor="let item of filtredFlights; let i = index " (click)="selectedDataFromFiltredFlights(i)">
     <ion-card-header text-wrap>
-      {{item.departure_airport}}->{{item.arrival_airport}}
+      {{i+1}}. Uçuş - {{item.departure_airport}} -> {{item.arrival_airport}}
     </ion-card-header>
     <hr>
     <ion-card-content>

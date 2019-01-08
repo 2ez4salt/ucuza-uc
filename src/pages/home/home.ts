@@ -1,6 +1,9 @@
 import {Component, ViewChild} from '@angular/core';
 import {NavController, NavParams, ActionSheetController, ModalController, Nav, AlertController} from 'ionic-angular';
-import {AngularFireDatabase} from 'angularfire2/database/'
+import {AngularFireDatabase} from 'angularfire2/database/';
+import {AngularFireAuth} from "@angular/fire/auth";
+import {TabsPage} from "../tabs/tabs";
+
 
 
 @Component({
@@ -19,7 +22,8 @@ export class HomePage {
               public actionSheetCtrl: ActionSheetController,
               public modalCtrl: ModalController,
               public afD: AngularFireDatabase,
-              public alertCtrl: AlertController) {
+              public alertCtrl: AlertController
+              ) {
 
   }
 
@@ -143,4 +147,42 @@ export class FiltredResults {
   filtredFlights = this.navParams.get("filtred")
 
 
+  selectedDataFromFiltredFlights(){
+    const modal = this.modalCtrl.create(PurchasePage);
+    modal.present();
+  }
+
+
+}
+
+@Component({
+  selector: 'page-home',
+  templateUrl: 'purchase.html'
+})
+export class PurchasePage{
+
+  constructor(public navCtrl: NavController,
+              public actionSheetCtrl: ActionSheetController,
+              public modalCtrl: ModalController,
+              public navParams: NavParams,
+              public alertCtrl: AlertController,
+              public afAuth: AngularFireAuth) {
+
+
+    const alert = this.alertCtrl.create({
+      title: 'Ödeme Yapılıyor!',
+      subTitle: 'Ödeme için PlayStore/AppStore ödeme sistemine yönleniyorsunuz. Hali hazırda bakiyeniz varsa tutar oradan düşecektir. Yoksa ödeme ekranına yönleneceksiniz',
+      buttons: [{
+        text: 'Ödemeyi tamamla ve Anasayfaya git',
+        handler: () => {
+          setTimeout(() => {
+            this.navCtrl.setRoot(TabsPage);
+          }, 1500);
+        }
+      }]
+    });
+    alert.present();
+
+
+  }
 }

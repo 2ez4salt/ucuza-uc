@@ -10,6 +10,7 @@ import {AlertController} from "ionic-angular";
   selector: 'page-login',
   templateUrl: 'login.html',
 })
+
 export class LoginPage {
 
   constructor(public navCtrl: NavController,
